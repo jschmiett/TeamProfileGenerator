@@ -1,3 +1,4 @@
+const { default: inquirer } = require('inquirer');
 const Employee = require('./employee');
 
 class Engineer extends Employee {
@@ -8,7 +9,16 @@ class Engineer extends Employee {
     }
 
     getGithub() {
-
+        // Uses inquirer to get GitHub information
+        inquirer
+            .prompt([
+                {
+                    type: 'input',
+                    name: 'github',
+                    message: 'What is your Git Hub username?'
+                }
+            ])
+        // TODO: Save GitHub information
     }
 
     getRole() {

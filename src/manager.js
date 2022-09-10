@@ -1,10 +1,27 @@
+const { default: inquirer } = require('inquirer');
 const Employee = require('./employee');
 
 class Manager extends Employee {
     constructor(name, officeNumber) {
         super(name, id, email)
 
+        // TODO: Use inquirer to define officeNumber?
         this.officeNumber = officeNumber;
+    }
+
+    getOfficeNumber() {
+        // Use inquirer to get Office Number
+        inquirer
+            .prompt([
+                {
+                    type: 'input',
+                    name: 'officeNumber',
+                    message: 'What is your Office Number?'
+                }
+            ])
+
+        // TODO: Save Office Number
+
     }
 
     getRole() {

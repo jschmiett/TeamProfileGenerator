@@ -1,13 +1,25 @@
+const { default: inquirer } = require('inquirer');
 const Intern = require('./employee');
 
 class Intern extends Employee {
     constructor(name, school) {
         super(name, id, email)
 
+
         this.school = school;
     }
 
     getSchool() {
+        // TODO: Use inquirer to get school information
+        inquirer
+            .prompt([
+                {
+                    type: 'input',
+                    name: 'school',
+                    message: 'What is the name of the school you attend?'
+                }
+            ])
+        // TODO: Save school information
 
     }
 
