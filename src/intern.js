@@ -1,5 +1,5 @@
-const { default: inquirer } = require('inquirer');
-const Intern = require('./employee');
+const inquirer = require('inquirer');
+const Employee = require('./employee');
 
 class Intern extends Employee {
     constructor(name, school) {
